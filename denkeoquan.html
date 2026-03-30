@@ -6,30 +6,34 @@
 
 <style>
 body {
-    text-align: center;
-    background: #111;
-    color: white;
+    margin: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* vòng tròn */
 .container {
     position: relative;
     width: 300px;
     height: 300px;
-    margin: 100px auto;
+    animation: rotate 8s linear infinite;
 }
 
+/* ảnh */
 .item {
     position: absolute;
     width: 80px;
     height: 80px;
-    border-radius: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
 }
 
-.container {
-    animation: quay 5s linear infinite;
-}
-
-@keyframes quay {
+/* quay */
+@keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
@@ -38,15 +42,13 @@ body {
 
 <body>
 
-<h1>Đèn kéo quân</h1>
-
 <div class="container" id="den">
-    <img class="item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqy_CFbEaorJdkM-7JySI_I0EGGqQu4C-WJw&s" style="top:0; left:110px;">
-    <img class="item" src="https://i.pinimg.com/1200x/4f/3b/4a/4f3b4a4218c0c087b6d79e7af7c062e3.jpg" style="top:50px; left:200px;">
-    <img class="item" src="https://i.pinimg.com/originals/ea/66/2f/ea662fe44e4b8671e42f82a81fdb9327.jpg" style="top:180px; left:200px;">
-    <img class="item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAUrxaJdepiLthMJoim9XwjAt5B-PqAHozIA&s" style="top:230px; left:110px;">
-    <img class="item" src="https://i.pinimg.com/236x/6f/18/a9/6f18a939d9abda045990660e77a10779.jpg" style="top:180px; left:20px;">
-    <img class="item" src="https://image.dienthoaivui.com.vn/x,webp,q90/https://dashboard.dienthoaivui.com.vn/uploads/dashboard/editor_upload/nen-trang-tron-23.jpg" style="top:50px; left:20px;">
+    <img class="item" src="https://picsum.photos/100?1" style="top:0; left:110px;">
+    <img class="item" src="https://picsum.photos/100?2" style="top:60px; left:210px;">
+    <img class="item" src="https://picsum.photos/100?3" style="top:180px; left:210px;">
+    <img class="item" src="https://picsum.photos/100?4" style="top:240px; left:110px;">
+    <img class="item" src="https://picsum.photos/100?5" style="top:180px; left:10px;">
+    <img class="item" src="https://picsum.photos/100?6" style="top:60px; left:10px;">
 </div>
 
 <script>
