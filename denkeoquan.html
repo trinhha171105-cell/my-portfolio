@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đèn kéo quân</title>
+
+<style>
+body {
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.item {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.container {
+    animation: quay 5s linear infinite;
+}
+
+@keyframes quay {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Đèn kéo quân</h1>
+
+<div class="container" id="den">
+    <img class="item" src="images/avatar.jpg" style="top:0; left:110px;">
+    <img class="item" src="images/avatar.jpg" style="top:50px; left:200px;">
+    <img class="item" src="images/avatar.jpg" style="top:180px; left:200px;">
+    <img class="item" src="images/avatar.jpg" style="top:230px; left:110px;">
+    <img class="item" src="images/avatar.jpg" style="top:180px; left:20px;">
+    <img class="item" src="images/avatar.jpg" style="top:50px; left:20px;">
+</div>
+
+<script>
+const den = document.getElementById("den");
+
+den.addEventListener("mouseover", () => {
+    den.style.animationPlayState = "paused";
+});
+
+den.addEventListener("mouseout", () => {
+    den.style.animationPlayState = "running";
+});
+</script>
+
+</body>
+</html>
